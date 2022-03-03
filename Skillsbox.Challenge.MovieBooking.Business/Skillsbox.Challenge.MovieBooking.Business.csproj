@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Skillsbox.Challenge.MovieBooking.Data\Skillsbox.Challenge.MovieBooking.Data.csproj" />
+    <ProjectReference Include="..\Skillsbox.Challenge.MovieBooking.Model\Skillsbox.Challenge.MovieBooking.Model.csproj" />
+  </ItemGroup>
+
 </Project>
