@@ -3,7 +3,9 @@
 
 
 @inject ICategoryService _categoryService
+@inject IJSRuntime _jsRuntime
 
+<_DeleteConfirmation IsParentComponentProcessing="IsLoading" ConfirmationChanged="ConfirmDelete_Click"></_DeleteConfirmation>
 <div class="row mt-4">
     <div class="col-6">
         <h4 class="card-title text-primary">Category List</h4>
@@ -30,7 +32,7 @@
                             </td> 
                             <td>
                             <NavLink href="@($"category/edit/{objCat.Id}")" class="btn-primary btn">Edit</NavLink>
-                            @*<button class="btn btn-danger" @onclick="()=>HandleDelete(objCat.Id)">Delete</button>*@
+                            <button class="btn btn-danger" @onclick="()=>HandleDelete(objCat.Id)">Delete</button>
                             </td>
                         </tr>
                     }
@@ -44,7 +46,7 @@
                 //loading gif
                 <div class="text-center">
                 <img src="/images/loading.gif">
-                    </div>
+                </div>
             }
             else
             {
@@ -72,13 +74,33 @@
         }
     }
 
-        private async Task LoadCategories()
+    private async Task LoadCategories()
     {
         IsLoading=true;
         StateHasChanged();
         Categories = await _categoryService.GetAll();
         IsLoading=false;
         StateHasChanged();
+    }
+
+    private void HandleDelete(int id)
+    {
+        DeleteCategoryId = id;
+        _jsRuntime.InvokeVoidAsync("ShowDeleteConfirmationModal");
+
+    }
+
+    public async Task ConfirmDelete_Click(bool isConfirmed)
+    {
+        IsLoading=true;
+        if(isConfirmed && DeleteCategoryId!=0)
+        {
+            //delete
+            await _categoryService.Delete(DeleteCategoryId);
+            await LoadCategories();
+            await _jsRuntime.InvokeVoidAsync("HideDeleteConfirmationModal");
+        }
+        IsLoading=false;
     }
 
 }
