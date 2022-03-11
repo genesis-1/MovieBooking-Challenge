@@ -7,11 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skillsbox.Challenge.MovieBo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skillsbox.Challenge.MovieBooking.API", "Skillsbox.Challenge.MovieBooking.API\Skillsbox.Challenge.MovieBooking.API.csproj", "{2F58B5F9-C2BB-4F10-97C5-BDBFE48FBFE4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skillsbox.Challenge.MovieBooking.Data", "Skillsbox.Challenge.MovieBooking.Data\Skillsbox.Challenge.MovieBooking.Data.csproj", "{7EACA8EF-048F-472E-809C-C8216CB7E1DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skillsbox.Challenge.MovieBooking.Core", "Skillsbox.Challenge.MovieBooking.Core\Skillsbox.Challenge.MovieBooking.Core.csproj", "{8F5C91E1-5087-4838-8C65-2B5FB6776FCF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skillsbox.Challenge.MovieBooking.Model", "Skillsbox.Challenge.MovieBooking.Model\Skillsbox.Challenge.MovieBooking.Model.csproj", "{D8A42A3B-6644-4C69-B222-D40DDAC0E553}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skillsbox.Challenge.MovieBooking.Business", "Skillsbox.Challenge.MovieBooking.Business\Skillsbox.Challenge.MovieBooking.Business.csproj", "{59468E24-98D5-4C52-8C5A-26BF42AE9F71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skillsbox.Challenge.MovieBooking.Infrastructure", "Skillsbox.Challenge.MovieBooking.Infrastructure\Skillsbox.Challenge.MovieBooking.Infrastructure.csproj", "{874E97BE-0D4D-49B3-BDEA-7E4A7C3D4DFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,18 +25,14 @@ Global
 		{2F58B5F9-C2BB-4F10-97C5-BDBFE48FBFE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F58B5F9-C2BB-4F10-97C5-BDBFE48FBFE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F58B5F9-C2BB-4F10-97C5-BDBFE48FBFE4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7EACA8EF-048F-472E-809C-C8216CB7E1DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7EACA8EF-048F-472E-809C-C8216CB7E1DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7EACA8EF-048F-472E-809C-C8216CB7E1DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7EACA8EF-048F-472E-809C-C8216CB7E1DB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D8A42A3B-6644-4C69-B222-D40DDAC0E553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D8A42A3B-6644-4C69-B222-D40DDAC0E553}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D8A42A3B-6644-4C69-B222-D40DDAC0E553}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D8A42A3B-6644-4C69-B222-D40DDAC0E553}.Release|Any CPU.Build.0 = Release|Any CPU
-		{59468E24-98D5-4C52-8C5A-26BF42AE9F71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{59468E24-98D5-4C52-8C5A-26BF42AE9F71}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{59468E24-98D5-4C52-8C5A-26BF42AE9F71}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{59468E24-98D5-4C52-8C5A-26BF42AE9F71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F5C91E1-5087-4838-8C65-2B5FB6776FCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F5C91E1-5087-4838-8C65-2B5FB6776FCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F5C91E1-5087-4838-8C65-2B5FB6776FCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F5C91E1-5087-4838-8C65-2B5FB6776FCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{874E97BE-0D4D-49B3-BDEA-7E4A7C3D4DFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{874E97BE-0D4D-49B3-BDEA-7E4A7C3D4DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{874E97BE-0D4D-49B3-BDEA-7E4A7C3D4DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{874E97BE-0D4D-49B3-BDEA-7E4A7C3D4DFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

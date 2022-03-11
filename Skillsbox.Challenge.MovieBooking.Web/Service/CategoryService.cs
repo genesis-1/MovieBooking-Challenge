@@ -18,7 +18,7 @@ namespace Skillsbox.Challenge.MovieBooking.Web.Service
             {
                 var content = JsonConvert.SerializeObject(objDTO);
                 var bodyContent = new StringContent(content, Encoding.UTF8, "application/json");
-                var response = await _httpClient.PostAsync("/categories", bodyContent);
+                var response = await _httpClient.PostAsync("/api/category", bodyContent);
                 string responseResult = response.Content.ReadAsStringAsync().Result;
                 if(response.IsSuccessStatusCode)
                 {
@@ -42,14 +42,14 @@ namespace Skillsbox.Challenge.MovieBooking.Web.Service
         {
 
 
-                await _httpClient.DeleteAsync($"/categories/{id}");
+                await _httpClient.DeleteAsync($"/api/category/{id}");
 
                 
         }
 
         public async Task<Category> Get(int id)
         {
-            var response = await _httpClient.GetAsync($"/categories/{id}");
+            var response = await _httpClient.GetAsync($"/api/category/{id}");
             var content = await response.Content.ReadAsStringAsync();
             if (response.IsSuccessStatusCode)
             {
@@ -67,7 +67,7 @@ namespace Skillsbox.Challenge.MovieBooking.Web.Service
         {
             try
             {
-                var response = await _httpClient.GetAsync("/categories");
+                var response = await _httpClient.GetAsync("/api/category");
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
@@ -92,7 +92,7 @@ namespace Skillsbox.Challenge.MovieBooking.Web.Service
         {
             var content = JsonConvert.SerializeObject(objDTO);
             var bodyContent = new StringContent(content, Encoding.UTF8, "application/json");
-            var response = await _httpClient.PutAsync("/categories", bodyContent);
+            var response = await _httpClient.PutAsync($"/api/category/{objDTO.Id}", bodyContent);
             string responseResult = response.Content.ReadAsStringAsync().Result;
             if (response.IsSuccessStatusCode)
             {
