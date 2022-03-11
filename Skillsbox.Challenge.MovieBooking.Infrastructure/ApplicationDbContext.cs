@@ -11,6 +11,10 @@ namespace Skillsbox.Challenge.MovieBooking.Infrastructure
     public class ApplicationDbContext : DbContext
     {
         public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Movie> Movies { get; set; }
+        public virtual DbSet<RunningTime> RunningTimes { get; set; }
+        public virtual DbSet<RunningDay> RunningDays { get; set; }
+        public virtual DbSet<RunningHourAndMinute> RunningHourAndMinutes { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
     }
