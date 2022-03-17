@@ -2,6 +2,7 @@ using Hangfire;
 using Microsoft.EntityFrameworkCore;
 using Skillsbox.Challenge.MovieBooking.API;
 using Skillsbox.Challenge.MovieBooking.API.Config;
+using Skillsbox.Challenge.MovieBooking.API.Service;
 using Skillsbox.Challenge.MovieBooking.Core.Persistence;
 
 using Skillsbox.Challenge.MovieBooking.Infrastructure;
@@ -21,9 +22,13 @@ builder.Services.SetupSqliteDb(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.SetupNSwag();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddHttpClient();
 #region Repositories
-builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+///builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+///builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+//builder.Services.AddScoped<IMovieRepository, MovieRepository>();
+builder.Services.AddScoped<IMovieService, MovieService>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 #endregion
 builder.Services.AddCors(o => o.AddPolicy("Skillsbox", builder =>
 {

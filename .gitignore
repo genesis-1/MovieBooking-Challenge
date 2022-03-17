@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+Skillsbox.Challenge.MovieBooking.API/sbMovies.db-shm
+Skillsbox.Challenge.MovieBooking.API/sbMovies.db-shm
+Skillsbox.Challenge.MovieBooking.API/sbMovies.db-wal

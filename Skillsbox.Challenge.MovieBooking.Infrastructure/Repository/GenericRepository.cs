@@ -60,5 +60,17 @@ namespace Skillsbox.Challenge.MovieBooking.Infrastructure.Repository
             var cachedList = await _dbContext.Set<T>().ToListAsync();
             _cacheService(cacheTech).Set(cacheKey, cachedList);
         }
+
+        public async Task AddRange(IEnumerable<T> entityList)
+        {
+            await _dbContext.Set<T>().AddRangeAsync(entityList);
+            await _dbContext.SaveChangesAsync();
+            BackgroundJob.Enqueue(() => RefreshCache());
+        }
+
+        //public Task AddRange<TEntity>(IEnumerable<TEntity> entityList)
+        //{
+
+        //}
     }
 }

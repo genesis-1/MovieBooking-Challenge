@@ -35,10 +35,10 @@ namespace Skillsbox.Challenge.MovieBooking.API.Model.Category
 
         public class QueryHandler : IRequestHandler<GetAllQuery, QueryResponse>
         {
-            private readonly ICategoryRepository _repo;
+            private readonly IUnitOfWork _repo;
             private readonly IMapper _mapper;
 
-            public QueryHandler(ICategoryRepository repo,
+            public QueryHandler(IUnitOfWork repo,
                     IMapper mapper
                     )
             {
@@ -51,7 +51,7 @@ namespace Skillsbox.Challenge.MovieBooking.API.Model.Category
             {
                 QueryResponse response = new();
 
-                IEnumerable<Core.Entities.Category> categories = await _repo.GetAllAsync();
+                IEnumerable<Core.Entities.Category> categories = await _repo.CategoryRepository.GetAllAsync();
                 response.Resource = categories.Select(x => _mapper.Map<CategoryDto>(x));
 
                 return response;

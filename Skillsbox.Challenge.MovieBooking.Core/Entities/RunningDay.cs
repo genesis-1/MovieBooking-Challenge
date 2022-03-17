@@ -10,6 +10,7 @@ namespace Skillsbox.Challenge.MovieBooking.Core.Entities
     {
         public int Id { get; set; }
         public string? Name { get; set; }
+        public int? RunningTimeId { get; set; }
         public ICollection<RunningHourAndMinute> RunningHourAndMinutes { get; set; }
     }
 }
