@@ -6,6 +6,7 @@ using Skillsbox.Challenge.MovieBooking.Core.Persistence;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,6 +31,7 @@ namespace Skillsbox.Challenge.MovieBooking.Infrastructure.Repository
         {
             if (!_cacheService(cacheTech).TryGet(cacheKey, out IReadOnlyList<T> cachedList))
             {
+                
                 cachedList = await _dbContext.Set<T>().ToListAsync();
                 _cacheService(cacheTech).Set(cacheKey, cachedList);
             }
@@ -66,6 +68,57 @@ namespace Skillsbox.Challenge.MovieBooking.Infrastructure.Repository
             await _dbContext.Set<T>().AddRangeAsync(entityList);
             await _dbContext.SaveChangesAsync();
             BackgroundJob.Enqueue(() => RefreshCache());
+        }
+
+        public async Task<IEnumerable<T>> GetAllByCriteriaAsync(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, string includeProperties = null)
+        {
+            if (!_cacheService(cacheTech).TryGet(cacheKey, out IEnumerable<T> cachedList))
+            {
+                IQueryable<T> query = _dbContext.Set<T>();
+
+                if(filter != null)
+                {
+                    query = query.Where(filter);
+                }
+
+                if(includeProperties != null)
+                {
+                    foreach (var includeProperty in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                    {
+                        query = query.Include(includeProperty);
+                    }
+                }
+
+                if (orderBy != null)
+                {
+                    return await orderBy(query).ToListAsync();
+                }
+                cachedList =  await query.ToListAsync();
+                _cacheService(cacheTech).Set(cacheKey, cachedList);
+
+            }
+            return cachedList;
+        }
+
+        public async Task<T> GetFistOrDefaultByCreteriaAsync(Expression<Func<T, bool>> filter = null, string includeProperties = null)
+        {
+            IQueryable<T> query = _dbContext.Set<T>();
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
+            if (includeProperties != null)
+            {
+                foreach (var includeProperty in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProperty);
+                }
+            }
+
+            var obj = await query.FirstOrDefaultAsync();
+            return obj;
         }
 
         //public Task AddRange<TEntity>(IEnumerable<TEntity> entityList)

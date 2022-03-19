@@ -1,4 +1,6 @@
 ﻿using FluentValidation.AspNetCore;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using Skillsbox.Challenge.MovieBooking.API.Infrastructure.Filters;
 using ZymLabs.NSwag.FluentValidation.AspNetCore;
 
@@ -15,6 +17,8 @@ namespace Skillsbox.Challenge.MovieBooking.API.Config
                     {
                         // Serilize enum in string
                         options.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
+                        options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+                        options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
                     })
                     .AddFluentValidation(options =>
                     {

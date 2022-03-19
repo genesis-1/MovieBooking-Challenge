@@ -1,7 +1,10 @@
 using Hangfire;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using Skillsbox.Challenge.MovieBooking.API;
 using Skillsbox.Challenge.MovieBooking.API.Config;
+using Skillsbox.Challenge.MovieBooking.API.Infrastructure.Service;
 using Skillsbox.Challenge.MovieBooking.API.Service;
 using Skillsbox.Challenge.MovieBooking.Core.Persistence;
 
@@ -23,13 +26,16 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.SetupNSwag();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddHttpClient();
-#region Repositories
-///builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-///builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-//builder.Services.AddScoped<IMovieRepository, MovieRepository>();
 builder.Services.AddScoped<IMovieService, MovieService>();
+builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-#endregion
+builder.Services.Configure<FormOptions>(o =>
+{
+    o.ValueLengthLimit = int.MaxValue;
+    o.MultipartBodyLengthLimit = int.MaxValue;
+    o.MemoryBufferThreshold = int.MaxValue;
+});
+
 builder.Services.AddCors(o => o.AddPolicy("Skillsbox", builder =>
 {
     builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
@@ -53,6 +59,12 @@ app.UseOpenApi();
 app.UseSwaggerUi3();
 app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions()
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"StaticFiles")),
+    RequestPath = new PathString("/StaticFiles")
+});
 
 app.UseRouting();
 

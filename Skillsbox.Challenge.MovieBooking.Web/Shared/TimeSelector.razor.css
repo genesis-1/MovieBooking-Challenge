@@ -1,0 +1,1230 @@
+﻿/*! CSS Used from: https://www.movies-at.ie/wp-content/cache/minify/a5ff7.css ; media=all */
+@media all {
+    h2 {
+        overflow-wrap: break-word;
+    }
+
+    ul {
+        overflow-wrap: break-word;
+    }
+
+    p {
+        overflow-wrap: break-word;
+    }
+}
+/*! CSS Used from: https://www.movies-at.ie/wp-content/cache/minify/f712f.css ; media=all */
+@media all {
+    a {
+        background-color: transparent;
+    }
+
+        a:active, a:hover {
+            outline: 0;
+        }
+
+    input, select {
+        margin: 0;
+        font: inherit;
+        color: inherit;
+    }
+
+    select {
+        text-transform: none;
+    }
+
+    input::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+
+    input {
+        line-height: normal;
+    }
+
+    @media print {
+        *, :after, :before {
+            color: #000 !important;
+            text-shadow: none !important;
+            background: 0 0 !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+        }
+
+        a, a:visited {
+            text-decoration: underline;
+        }
+
+            a[href]:after {
+                content: " (" attr(href) ")";
+            }
+
+        h2, p {
+            orphans: 3;
+            widows: 3;
+        }
+
+        h2 {
+            page-break-after: avoid;
+        }
+
+        select {
+            background: #fff !important;
+        }
+    }
+
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    :after, :before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    input, select {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+    a {
+        color: #337ab7;
+        text-decoration: none;
+    }
+
+        a:focus, a:hover {
+            color: #23527c;
+            text-decoration: underline;
+        }
+
+        a:focus {
+            outline: thin dotted;
+            outline: 5px auto -webkit-focus-ring-color;
+            outline-offset: -2px;
+        }
+
+    h2 {
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.1;
+        color: inherit;
+    }
+
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        margin: 0 0 10px;
+    }
+
+    ul {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media (min-width:768px) {
+        .container {
+            width: 750px;
+        }
+    }
+
+    @media (min-width:992px) {
+        .container {
+            width: 970px;
+        }
+    }
+
+    @media (min-width:1200px) {
+        .container {
+            width: 1170px;
+        }
+    }
+
+    .row {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .col-md-10, .col-md-12, .col-md-2, .col-sm-3, .col-sm-9, .col-xs-3, .col-xs-9 {
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .col-xs-3, .col-xs-9 {
+        float: left;
+    }
+
+    .col-xs-9 {
+        width: 75%;
+    }
+
+    .col-xs-3 {
+        width: 25%;
+    }
+
+    @media (min-width:768px) {
+        .col-sm-3, .col-sm-9 {
+            float: left;
+        }
+
+        .col-sm-9 {
+            width: 75%;
+        }
+
+        .col-sm-3 {
+            width: 25%;
+        }
+    }
+
+    @media (min-width:992px) {
+        .col-md-10, .col-md-12, .col-md-2 {
+            float: left;
+        }
+
+        .col-md-12 {
+            width: 100%;
+        }
+
+        .col-md-10 {
+            width: 83.33333333%;
+        }
+
+        .col-md-2 {
+            width: 16.66666667%;
+        }
+
+        .col-md-offset-1 {
+            margin-left: 8.33333333%;
+        }
+    }
+
+    .container:after, .container:before, .row:after, .row:before {
+        display: table;
+        content: " ";
+    }
+
+    .container:after, .row:after {
+        clear: both;
+    }
+
+    .fancybox-iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    * {
+        margin: 0;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    input, select {
+        color: #333;
+    }
+
+    a, a:active, a:hover, a:visited {
+        color: #560e6f;
+    }
+
+        a:active, a:focus {
+            text-decoration: none;
+        }
+
+    h2 {
+        margin-top: 0;
+    }
+
+    h2 {
+        font-family: Comfortaa,cursive;
+        font-weight: 900;
+        font-size: 35px;
+        margin-bottom: 15px;
+        letter-spacing: -1p 0x;
+    }
+
+    @media screen and (max-width:1200px) {
+        section .container {
+            width: 100%;
+        }
+    }
+
+    .loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -32px;
+        margin-left: -32px;
+        display: inline-block;
+        width: 64px;
+        height: 64px;
+        z-index: 11;
+    }
+
+        .loading:after {
+            content: " ";
+            display: block;
+            width: 46px;
+            height: 46px;
+            margin: 1px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            border-color: #560e6f transparent;
+            animation: lds-dual-ring 1.2s linear infinite;
+        }
+
+    section.content.white h2 {
+        color: #560e6f;
+    }
+
+    section.content.white ul {
+        margin-bottom: 25px;
+        margin-top: 10px;
+    }
+
+        section.content.white ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+            section.content.white ul li:before {
+                content: "\2022";
+                color: #560e6f;
+                margin-right: 10px;
+                display: block;
+                float: left;
+                font-size: 15px;
+                position: absolute;
+                left: 0;
+            }
+
+    section.content .fillable {
+        position: relative;
+    }
+
+    @media screen and (max-width:1200px) {
+        section.content.pod h2 {
+            font-size: 28px;
+        }
+
+        section.content h2 {
+            letter-spacing: -1px;
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width:375px) {
+        section.content h2 {
+            max-width: 295px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .button-link {
+        display: inline-block;
+        padding: 11px 25px;
+        font-size: 21px;
+        font-family: Comfortaa,cursive;
+        position: relative;
+        font-weight: 500;
+        border: 2px solid #fff;
+        border-right: none;
+    }
+
+        .button-link:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -2px;
+            right: -21px;
+            width: 22px;
+            height: 52px;
+        }
+
+        .button-link.purple {
+            background: #560e6f;
+            color: #fff;
+        }
+
+            .button-link.purple:before {
+                background: url(https://www.movies-at.ie/wp-content/themes/movies-at/assets/img/button-right-purple.png?ver=3) center center no-repeat;
+                background-size: contain;
+            }
+
+    @media screen and (max-width:375px) {
+        .button-link {
+            font-size: 15px;
+            padding: 8px 20px 7px;
+        }
+
+            .button-link:before {
+                top: -1px;
+                height: 44px;
+                right: -20px;
+            }
+    }
+
+    .megalist-container .megalist .meta {
+        margin-bottom: 10px;
+    }
+
+        .megalist-container .megalist .meta .date-select {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0;
+            margin-bottom: 25px;
+        }
+
+            .megalist-container .megalist .meta .date-select > ul {
+                list-style-type: none;
+                margin-bottom: 0;
+            }
+
+                .megalist-container .megalist .meta .date-select > ul li {
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    background: #eee;
+                    padding: 5px 10px;
+                    cursor: pointer;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                }
+
+                    .megalist-container .megalist .meta .date-select > ul li:before {
+                        content: "";
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+
+                    .megalist-container .megalist .meta .date-select > ul li.selected {
+                        background: #560e6f;
+                        color: #fff;
+                    }
+
+                    .megalist-container .megalist .meta .date-select > ul li.calendar-icon {
+                        background: #eee;
+                        vertical-align: middle;
+                        margin-bottom: 3px;
+                        padding: 0;
+                    }
+
+                        .megalist-container .megalist .meta .date-select > ul li.calendar-icon input {
+                            width: 38px;
+                            height: 38px;
+                            background: url(https://www.movies-at.ie/wp-content/themes/movies-at/assets/img/icon-calendar.png?ver=2) center center no-repeat;
+                            background-size: 32px;
+                            border: none;
+                            padding: 5px 10px;
+                            cursor: pointer;
+                            text-indent: -9999px;
+                        }
+
+        .megalist-container .megalist .meta .date-select-mobile {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+            .megalist-container .megalist .meta .date-select-mobile .inner {
+                display: inline-block;
+                padding: 10px 20px;
+                background: #f1f1f1;
+                border: 1px solid #ccc;
+            }
+
+                .megalist-container .megalist .meta .date-select-mobile .inner select {
+                    padding: 10px;
+                    margin-right: 10px;
+                    min-width: 165px;
+                    border: 1px solid #ddd;
+                    background: #fff;
+                }
+
+                .megalist-container .megalist .meta .date-select-mobile .inner .calendar-icon-mobile {
+                    margin-bottom: 3px;
+                    padding: 0;
+                    width: 45px;
+                    height: 45px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    border: 1px solid #ddd;
+                    background: #fff;
+                }
+
+                    .megalist-container .megalist .meta .date-select-mobile .inner .calendar-icon-mobile input {
+                        width: 38px;
+                        height: 38px;
+                        background: url(https://www.movies-at.ie/wp-content/themes/movies-at/assets/img/icon-calendar.png?ver=2) bottom center no-repeat;
+                        background-size: 36px;
+                        border: none;
+                        padding: 5px 10px;
+                        cursor: pointer;
+                        text-indent: -9999px;
+                    }
+
+        .megalist-container .megalist .meta .current-date {
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .megalist-container .megalist .meta .current-date-mobile {
+            font-size: 15px;
+            font-weight: 500;
+            text-align: center;
+            width: 100%;
+            display: none;
+            margin-bottom: 20px;
+        }
+
+    .megalist-container .megalist .loading {
+        top: 250px;
+    }
+
+    .megalist-container .megalist ul.legend {
+        margin-bottom: 0;
+        margin-top: 45px;
+        padding-left: 5px;
+        opacity: .8;
+    }
+
+        .megalist-container .megalist ul.legend li {
+            padding-left: 0;
+            margin-right: 15px;
+            font-size: 15px;
+            display: none;
+            transition: .5s;
+        }
+
+            .megalist-container .megalist ul.legend li.active {
+                display: inline-block;
+            }
+
+            .megalist-container .megalist ul.legend li:before {
+                content: "";
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .megalist-container .megalist ul.legend li span {
+                display: block;
+                width: 15px;
+                height: 15px;
+                float: left;
+                margin-top: 5px;
+                margin-right: 10px;
+            }
+
+            .megalist-container .megalist ul.legend li.is-3D span {
+                background-color: #4fbffa;
+            }
+
+            .megalist-container .megalist ul.legend li.is-4K span {
+                background-color: #fcc754;
+            }
+
+            .megalist-container .megalist ul.legend li.is-MX span {
+                background-color: #ff6f01;
+            }
+
+            .megalist-container .megalist ul.legend li.is-KC span {
+                background-color: #c72a4f;
+            }
+
+            .megalist-container .megalist ul.legend li.is-RP span {
+                background-color: #59c340;
+            }
+
+            .megalist-container .megalist ul.legend li.is-HH span {
+                background-color: #a4adf4;
+            }
+
+            .megalist-container .megalist ul.legend li.is-SF span {
+                background-color: #f486c9;
+            }
+
+            .megalist-container .megalist ul.legend li.is-SN span {
+                background-color: #ffbe31;
+            }
+
+            .megalist-container .megalist ul.legend li.is-VP span {
+                background-color: #3673ff;
+            }
+
+    .megalist-container .megalist ul.legend-mobile {
+        margin-bottom: 25px;
+        margin-top: 19px;
+        padding-left: 5px;
+        opacity: .8;
+        text-align: center;
+        border-bottom: 1px solid #eaeaea;
+        padding-bottom: 17px;
+        display: none;
+    }
+
+        .megalist-container .megalist ul.legend-mobile li {
+            padding-left: 0;
+            margin-right: 15px;
+            font-size: 15px;
+            margin-bottom: 0;
+            min-width: 44%;
+            text-align: left;
+            display: none;
+            transition: .5s;
+        }
+
+            .megalist-container .megalist ul.legend-mobile li.active {
+                display: inline-block;
+            }
+
+            .megalist-container .megalist ul.legend-mobile li:before {
+                content: "";
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .megalist-container .megalist ul.legend-mobile li span {
+                display: block;
+                width: 15px;
+                height: 15px;
+                float: left;
+                margin-top: 5px;
+                margin-right: 10px;
+            }
+
+            .megalist-container .megalist ul.legend-mobile li.is-3D span {
+                background-color: #4fbffa;
+            }
+
+            .megalist-container .megalist ul.legend-mobile li.is-4K span {
+                background-color: #fcc754;
+            }
+
+            .megalist-container .megalist ul.legend-mobile li.is-MX span {
+                background-color: #ff6f01;
+            }
+
+            .megalist-container .megalist ul.legend-mobile li.is-KC span {
+                background-color: #c72a4f;
+            }
+
+            .megalist-container .megalist ul.legend-mobile li.is-RP span {
+                background-color: #59c340;
+            }
+
+            .megalist-container .megalist ul.legend-mobile li.is-HH span {
+                background-color: #a4adf4;
+            }
+
+            .megalist-container .megalist ul.legend-mobile li.is-SF span {
+                background-color: #f486c9;
+            }
+
+            .megalist-container .megalist ul.legend-mobile li.is-SN span {
+                background-color: #ffbe31;
+            }
+
+            .megalist-container .megalist ul.legend-mobile li.is-VP span {
+                background-color: #3673ff;
+            }
+
+    .megalist-container .megalist .event-list .event {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+        margin-bottom: 45px;
+    }
+
+        .megalist-container .megalist .event-list .event h2 {
+            font-size: 23px;
+        }
+
+        .megalist-container .megalist .event-list .event .poster {
+            width: 135px;
+            height: 200px;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+            .megalist-container .megalist .event-list .event .poster a {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+                .megalist-container .megalist .event-list .event .poster a.play-button {
+                    width: 45px;
+                    height: 45px;
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-top: -23px;
+                    margin-left: -23px;
+                    background: url(https://www.movies-at.ie/wp-content/themes/movies-at/assets/img/btn-play.png?ver=2) center center no-repeat;
+                    background-size: contain;
+                    opacity: .7;
+                }
+
+                    .megalist-container .megalist .event-list .event .poster a.play-button:hover {
+                        opacity: 1;
+                    }
+
+        .megalist-container .megalist .event-list .event .details {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+            .megalist-container .megalist .event-list .event .details ul {
+                list-style-type: none;
+                float: left;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+                .megalist-container .megalist .event-list .event .details ul li {
+                    padding-left: 0;
+                    float: left;
+                }
+
+                    .megalist-container .megalist .event-list .event .details ul li:before {
+                        content: "|";
+                        margin-left: 5px;
+                        margin-right: 5px;
+                        position: relative;
+                    }
+
+                    .megalist-container .megalist .event-list .event .details ul li:first-child:before {
+                        content: "";
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+
+                    .megalist-container .megalist .event-list .event .details ul li.certificate {
+                        cursor: pointer;
+                    }
+
+                        .megalist-container .megalist .event-list .event .details ul li.certificate span {
+                            width: 28px;
+                            height: 28px;
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+
+        .megalist-container .megalist .event-list .event .performance-times {
+            margin-bottom: 25px;
+        }
+
+            .megalist-container .megalist .event-list .event .performance-times .performance-time {
+                background: #f2f2f2;
+                padding: 10px;
+                border: 1px solid #eaeaea;
+                position: relative;
+            }
+
+                .megalist-container .megalist .event-list .event .performance-times .performance-time ul {
+                    list-style-type: none;
+                    margin-bottom: 0;
+                }
+
+                    .megalist-container .megalist .event-list .event .performance-times .performance-time ul li {
+                        display: inline-block;
+                        margin-right: 15px;
+                        padding-left: 0;
+                        position: relative;
+                    }
+
+                        .megalist-container .megalist .event-list .event .performance-times .performance-time ul li a {
+                            display: block;
+                            background: #560e6f;
+                            color: #fff;
+                            padding: 5px 10px;
+                            border-radius: 5px;
+                        }
+
+                        .megalist-container .megalist .event-list .event .performance-times .performance-time ul li:before {
+                            content: "";
+                            margin: 0;
+                        }
+
+                        .megalist-container .megalist .event-list .event .performance-times .performance-time ul li span {
+                            position: absolute;
+                            bottom: -1px;
+                            left: 0;
+                            width: 100%;
+                            height: 5px;
+                            border-bottom-left-radius: 5px;
+                            border-bottom-right-radius: 5px;
+                        }
+
+                            .megalist-container .megalist .event-list .event .performance-times .performance-time ul li span i {
+                                position: absolute;
+                                font-style: normal;
+                                opacity: 0;
+                                transition: .5s;
+                                display: block;
+                                width: 70px;
+                                left: 50%;
+                                margin-left: -35px;
+                                color: #fff;
+                                font-size: 10px;
+                                bottom: -10px;
+                                line-height: 100%;
+                                padding: 3px 3px 4px;
+                                border-radius: 2px;
+                                text-align: center;
+                                height: auto;
+                            }
+
+                                .megalist-container .megalist .event-list .event .performance-times .performance-time ul li span i::before {
+                                    content: "";
+                                    display: block;
+                                    position: absolute;
+                                    width: 8px;
+                                    height: 8px;
+                                    transform: rotate(45deg);
+                                    background-color: inherit;
+                                    left: 50%;
+                                    margin-left: -4px;
+                                    top: -4px;
+                                }
+
+                            .megalist-container .megalist .event-list .event .performance-times .performance-time ul li span.is-VP, .megalist-container .megalist .event-list .event .performance-times .performance-time ul li span.is-VP i {
+                                background-color: #3673ff;
+                            }
+
+                        .megalist-container .megalist .event-list .event .performance-times .performance-time ul li:hover {
+                            box-shadow: none;
+                        }
+
+                            .megalist-container .megalist .event-list .event .performance-times .performance-time ul li:hover a {
+                                text-decoration: none;
+                                background: #ffbe31;
+                            }
+
+                            .megalist-container .megalist .event-list .event .performance-times .performance-time ul li:hover span i {
+                                opacity: 1;
+                            }
+
+    @media screen and (max-width:991px) {
+        .megalist-container {
+            padding: 25px;
+            padding-top: 0;
+        }
+
+            .megalist-container .megalist .meta .date-select, .megalist-container .megalist .performance-times .performance-time {
+                font-size: 15px;
+            }
+    }
+
+    @media screen and (max-width:667px) {
+        .megalist-container .megalist .meta .date-select {
+            display: none;
+        }
+
+        .megalist-container .megalist .meta .current-date-mobile, .megalist-container .megalist .meta .date-select-mobile {
+            display: block;
+        }
+
+        .megalist-container .megalist ul.legend {
+            display: none;
+        }
+
+        .megalist-container .megalist ul.legend-mobile {
+            display: block;
+        }
+
+        .megalist-container .megalist .event-list .event .poster {
+            width: 125px;
+            height: 190px;
+        }
+
+        .megalist-container .megalist .current-date {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width:375px) {
+        .megalist-container .megalist .event-list .event .poster {
+            width: 200px;
+            height: 300px;
+            margin: auto auto 40px;
+        }
+
+        .megalist-container .megalist .event-list .event h2 {
+            text-align: center;
+            font-size: 35px;
+        }
+
+        .megalist-container .megalist .event-list .event .details ul {
+            float: none;
+            width: 100%;
+            text-align: center;
+        }
+
+            .megalist-container .megalist .event-list .event .details ul li {
+                float: none;
+                display: inline-block;
+            }
+
+        .megalist-container .megalist .event-list .event .performance-times {
+            text-align: center;
+        }
+
+            .megalist-container .megalist .event-list .event .performance-times .performance-time ul li {
+                margin-right: 5px;
+                margin-left: 5px;
+            }
+
+        .megalist-container .megalist .event-list .event .col-left, .megalist-container .megalist .event-list .event .col-right {
+            width: 100%;
+        }
+    }
+}
+/*! CSS Used keyframes */
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/*! CSS Used fontfaces */
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Ptsg8LJRfWJmhDAuUs4QIFqPfE.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Ptsg8LJRfWJmhDAuUs4SYFqPfE.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Ptsg8LJRfWJmhDAuUs4ToFqPfE.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Ptsg8LJRfWJmhDAuUs4QoFqPfE.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Ptsg8LJRfWJmhDAuUs4Q4FqPfE.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Ptsg8LJRfWJmhDAuUs4TYFq.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Ptsg8LJRfWJmhDAuUs4QIFqPfE.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Ptsg8LJRfWJmhDAuUs4SYFqPfE.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Ptsg8LJRfWJmhDAuUs4ToFqPfE.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Ptsg8LJRfWJmhDAuUs4QoFqPfE.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Ptsg8LJRfWJmhDAuUs4Q4FqPfE.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Ptsg8LJRfWJmhDAuUs4TYFq.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Ptsg8LJRfWJmhDAuUs4QIFqPfE.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Ptsg8LJRfWJmhDAuUs4SYFqPfE.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Ptsg8LJRfWJmhDAuUs4ToFqPfE.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Ptsg8LJRfWJmhDAuUs4QoFqPfE.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Ptsg8LJRfWJmhDAuUs4Q4FqPfE.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1Ptsg8LJRfWJmhDAuUs4TYFq.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEC_I2udQ.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEL_I2udQ.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEM_I2udQ.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEA_I2udQ.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEB_I2udQ.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEP_I0.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEC_I2udQ.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEL_I2udQ.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEM_I2udQ.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEA_I2udQ.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEB_I2udQ.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEP_I0.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEC_I2udQ.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEL_I2udQ.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEM_I2udQ.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEA_I2udQ.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEB_I2udQ.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v37/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEP_I0.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

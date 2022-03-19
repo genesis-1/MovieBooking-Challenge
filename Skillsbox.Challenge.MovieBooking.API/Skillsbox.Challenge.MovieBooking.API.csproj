@@ -55,4 +55,8 @@
     <ProjectReference Include="..\Skillsbox.Challenge.MovieBooking.Infrastructure\Skillsbox.Challenge.MovieBooking.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="StaticFiles\Images\" />
+  </ItemGroup>
+
 </Project>

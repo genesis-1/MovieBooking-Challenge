@@ -1,6 +1,7 @@
-﻿using AutoMapper;
+﻿
 using FluentValidation;
 using MediatR;
+using Skillsbox.Challenge.MovieBooking.API.Infrastructure.Helper;
 using Skillsbox.Challenge.MovieBooking.API.Service;
 using Skillsbox.Challenge.MovieBooking.Core.Persistence;
 
@@ -10,7 +11,20 @@ namespace Skillsbox.Challenge.MovieBooking.API.Model.Movie
     {
         public class GetAllQuery : IRequest<QueryResponse>
         {
+            public GetAllQuery()
+            {
+                PageNumber = 1;
+                PageSize = 6;
+            }
+            public int PageNumber { get; set; }
+            public int PageSize { get; set; }
+        }
 
+        public class MovieParameters : QueryStringParameters
+        {
+            public MovieParameters()
+            {
+            }
         }
 
         public class QueryResponse
@@ -18,7 +32,7 @@ namespace Skillsbox.Challenge.MovieBooking.API.Model.Movie
             /// <summary>
             ///     Resource
             /// </summary>
-            public IEnumerable<MovieArray> Resource { get; set; }
+            public PagedList<Core.Entities.Movie> Resource { get; set; }
         }
 
         public class GetAllMoviesQueryValidator : AbstractValidator<GetAllQuery>
@@ -37,18 +51,15 @@ namespace Skillsbox.Challenge.MovieBooking.API.Model.Movie
         {
             private readonly IMovieService _movieService;
             private readonly IUnitOfWork _repo;
-            private readonly IMapper _mapper;
             public Random rand = new Random();
             int randomNumber = 0;
             public List<int> generatedRandonNumbers = new List<int>();
 
             public QueryHandler(IMovieService movieService,
-                IUnitOfWork repo,
-                IMapper mapper
+                IUnitOfWork repo
                     )
             {
                 _repo = repo;
-                _mapper = mapper;
                 _movieService = movieService ?? throw new ArgumentNullException(nameof(movieService));
 
             }
@@ -72,12 +83,15 @@ namespace Skillsbox.Challenge.MovieBooking.API.Model.Movie
 
                 try
                 {
-                    IEnumerable<MovieArray> movies = await _movieService.GetAllAsync();
+                    var movies = await _repo.MovieRepository.GetAllByCriteriaAsync(includeProperties: "RunningTime.RunningDays.RunningHourAndMinutes");
 
-                    
-                    response.Resource = movies;
+                    var pageMovies = await PagedList<Core.Entities.Movie>.ToPagedList(movies, request.PageNumber, request.PageSize);
+
+                    response.Resource = pageMovies;
 
                     return response;
+
+
                 }
                 catch (Exception ex)
                 {
