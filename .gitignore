@@ -240,6 +240,7 @@ ClientBin/
 *.publishsettings
 orleans.codegen.cs
 
+
 # Including strong name files can present a security risk
 # (https://github.com/github/gitignore/pull/2483#issue-259490424)
 #*.snk
@@ -364,3 +365,6 @@ FodyWeavers.xsd
 Skillsbox.Challenge.MovieBooking.API/sbMovies.db-shm
 Skillsbox.Challenge.MovieBooking.API/sbMovies.db-shm
 Skillsbox.Challenge.MovieBooking.API/sbMovies.db-wal
+Skillsbox.Challenge.MovieBooking.API/sbMovies.db
+.gitignore
+Skillsbox.Challenge.MovieBooking.API/sbMovies.db
