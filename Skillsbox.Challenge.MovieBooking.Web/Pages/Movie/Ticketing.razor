@@ -1,0 +1,57 @@
+﻿@page "/ticket/create"
+
+<div class="row mt-4">
+            <div class="movie-booking-page">
+            <h1 class="title tickets-title">Tickets Only</h1>
+            <div class="tickets-container">
+                <div class="ticket">
+                    <div class="ticket-details">
+                        <p class="title">Adult</p>
+                        <p class="ticket-price">Price: &pound;8.80</p>
+                    </div>
+                    <div class="ticket-count">
+                        <input type="number" value="0">
+                        <div class="count-operations">
+                            <button>+</button>
+                            <button>-</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ticket">
+                    <div class="ticket-details">
+                        <p class="title">CHILD (AGE 14 AND UNDER)</p>
+                        <p class="ticket-price">Price: &pound;7.50</p>
+                    </div>
+                    <div class="ticket-count">
+                        <input type="number" value="0">
+                        <div class="count-operations">
+                            <button>+</button>
+                            <button>-</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ticket">
+                    <div class="ticket-details">
+                        <p class="title">FAMILY * 4(2AD+2CH)</p>
+                        <p class="ticket-price">Price: &pound;7.50</p>
+                    </div>
+                    <div class="ticket-count">
+                        <input type="number" value="0">
+                        <div class="count-operations">
+                            <button>+</button>
+                            <button>-</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tickets-actions">
+                createSeats
+                <NavLink href="@("createSeats")" class="ticket-back">BACK</NavLink>
+                <NavLink href="@("createSeats")" class="ticket-proceed book-btn">PROCEED</NavLink>
+            </div>
+        </div>
+</div>
+
+@code {
+
+}

@@ -1,0 +1,363 @@
+﻿
+
+body {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    ;
+}
+
+.img {
+    max-width: 100%;
+}
+
+.link-reset {
+    text-decoration: none;
+    color: inherit;
+}
+
+.text_highlight {
+    color: #560e6f;
+}
+
+.title {
+    font-size: 1.5em;
+    color: #560e6f;
+}
+/* General Start */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+body {
+    margin: 10px 50px;
+}
+/* General End */
+/* Movies days Start */
+.bar {
+    padding-left: 0px;
+}
+
+    .bar li {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+        .bar li a {
+            padding: 10px;
+            background-color: #eee;
+            border-radius: 8px;
+            color: #444444;
+            text-decoration: none;
+        }
+
+            .bar li a:hover {
+                background-color: #ddd;
+                color: #444444;
+            }
+
+        .bar li.active a {
+            background-color: #560e6f;
+            color: #fff;
+        }
+/* Movies days end */
+/* Current date Start */
+.currentdate {
+    margin-top: 20px;
+}
+/* Current date End*/
+/* Tags start */
+.tags {
+    padding-left: 0px;
+    margin-top: 80px;
+}
+
+    .tags li {
+        color: #560e6f;
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 30px;
+    }
+
+    .tags .tag {
+        min-width: 10px;
+        min-height: 10px;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+        .tags .tag.tag-blue {
+            background-color: #5e8fff;
+        }
+
+        .tags .tag.tag-green {
+            background-color: #7acf66;
+        }
+/* Tags end */
+/* Movie panel start*/
+.movie-panel {
+    padding: 30px 0px;
+    display: flex;
+    border-top: 1px solid #f2f2f2;
+}
+
+.screen-display {
+    background-color: #c72a4f;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.row-display {
+    background-color: #dddede;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.movie-panel .panel-image {
+    width: 150px;
+    background-color: #444444;
+    min-height: 100%;
+}
+
+.movie-panel .panel-content {
+    padding-left: 40px;
+}
+
+    .movie-panel .panel-content .title {
+        font-size: 30px;
+        color: #560e6f;
+        font-weight: 100;
+        margin: 10px 0px;
+    }
+
+    .movie-panel .panel-content .time {
+        padding-left: 0px;
+        background-color: #f2f2f2;
+        padding: 10px 5px;
+        margin-top: 10px;
+    }
+
+    .movie-panel .panel-content .subtitle .flag {
+        display: inline-block;
+        background-color: #f2962a;
+        padding: 9px 6px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 11px;
+        color: #fff;
+        text-shadow: 1px 1px #000;
+    }
+
+    .movie-panel .panel-content .time li {
+        display: inline-block;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 8px;
+        text-decoration: none;
+        background-color: #560e6f;
+        color: #fff;
+        margin-right: 10px;
+    }
+/* Movie panel end*/
+
+/* Movie seats start */
+.movie-booking-page {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.cinema-container {
+}
+
+.movie-title {
+    border-bottom: 1px solid #560e6f;
+    padding-bottom: 9px;
+    padding-top: 9px;
+    margin-bottom: 12px;
+    color: #560e6f;
+    border-top: 1px solid #560e6f;
+}
+
+.tickets-title {
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 28px;
+    border-bottom: 10px solid #ffbe31;
+}
+
+.ticket {
+    display: flex;
+    padding: 10px;
+    border-bottom: 2px solid #560e6f;
+}
+
+.ticket-details {
+    flex: 3;
+}
+
+.ticket-count {
+    flex: 1;
+    display: flex;
+}
+
+.movie-cinema-name {
+    border: 1px solid #000;
+    padding: 6px 5px;
+    font-size: 8px;
+    background: #d38f32;
+    color: #ffd;
+    border-radius: 50%;
+}
+
+.movie-details {
+    line-height: 1.2em;
+    padding: 10px;
+    display: flex;
+    flex: 1 2;
+    margin-bottom: 20px;
+}
+
+    .movie-details .movie-synopsis {
+        flex: 1;
+    }
+
+    .movie-details .movie-features {
+        flex: 2;
+    }
+
+    .movie-details li {
+        list-style: none;
+    }
+
+.button-bg {
+    background-color: #560e6f;
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.schedule-container {
+    margin-top: 30px;
+}
+
+.schedule-title {
+    font-size: 22px;
+    color: #c72a4f;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.schedule-box {
+    display: flex;
+    border-bottom: 1px solid #560e6f;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.timeslot a {
+    background: #560e6f;
+    display: inline-block;
+    color: #fff;
+    padding: 10px;
+}
+
+.info-box {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.ticket-price {
+    color: #c72a4f;
+    font-size: 18px;
+    margin: 5px 0px;
+}
+
+.ticket-count input {
+    text-align: center;
+    border: 1px solid #000;
+    background: #f5f5f5;
+    outline: 0;
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+.ticket-count .count-operations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    .ticket-count .count-operations button {
+        padding: 5px;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+
+.ticket-back {
+    background-color: #dddede;
+    padding: 10px;
+    color: #a09e9e;
+    font-size: 2.2em;
+    border: 0;
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.ticket-proceed {
+    border: 0;
+}
+
+.tickets-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.info-box-details {
+    text-align: center;
+}
+
+.seats-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.seat-aisle:not(:first-child) {
+    margin-left: 10%;
+}
+
+.seat-row {
+    margin-bottom: 14px;
+}
+
+.seat-label {
+    display: inline;
+    font-weight: bold;
+}
+
+.seat-place {
+    background-image: url("../img/seat_green.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline;
+    cursor: pointer;
+    background-position-y: 3px;
+    padding: 14px;
+}
+
+.book-btn {
+    background-color: #560e6f;
+    padding: 10px;
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+/* Movie seat end */

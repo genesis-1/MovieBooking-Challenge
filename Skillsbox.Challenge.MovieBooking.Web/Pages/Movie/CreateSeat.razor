@@ -1,0 +1,57 @@
+﻿@page "/createSeats"
+
+<div class="row mt-4">
+            <div class="movie-booking-page">
+            <h1 class="movie-title">CRY MACHO <span class="movie-cinema-name">12A</span></h1>
+            <div class="movie-details">
+                <ul>
+                    <li>Cinema: MOVIES@Dundrum</li>
+                    <li>Date: Tue. 16th Nov</li>
+                    <li>Time: 4:20pm</li>
+                    <li>Screen: Screen 06</li>
+                </ul>
+            </div>
+            <!-- Movie days start here-->
+            <div class="cinema-container">
+                <div class="info-box">
+                    <div class="info-box-details">
+                        <p>Select your seats by moving your mouse over the seating plan.</p>
+                        <p>Pink seats represent your current selection.</p>
+                        <p>Green seats are available to be selected.</p>
+                        <p>You may select any seat block which changes the seat colour to .</p>
+                    </div>
+                    <div class="screen-display">SCREEN</div>
+                    <div class="row-display">FRONT ROW</div>
+                </div>
+                
+                <div class="seats-container">
+                    @for(int i = 0; i<2; i++)
+                {
+                      <div class="seat-aisle">
+
+                        @for(char j = 'A'; j < 'K'; j++)
+                        {
+                        <div class="seat-label">
+                            <span>@j</span>
+                        </div> 
+                            @for(int k = 1; k <= 10; k++)
+                            {
+                                <div class="seat-place">
+                                <span>@k</span>
+                                </div>
+                            }
+                            <div>&nbsp;</div>
+                        }
+                          
+                    </div>
+                }
+                </div>
+                <NavLink href="@("booking")" class="book-btn">CLICK HERE TO BOOK THESE SEATS</NavLink>
+            </div>
+            <!-- Movie days end here-->
+        </div>
+</div>
+
+@code {
+
+}

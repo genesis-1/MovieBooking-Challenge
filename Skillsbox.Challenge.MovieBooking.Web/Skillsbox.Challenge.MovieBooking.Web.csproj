@@ -7,10 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Pages\Movie\Booking.razor.css" />
+    <None Remove="Pages\Movie\CreateSeat.razor.css" />
+    <None Remove="Pages\Movie\MovieDetail.razor.css" />
     <None Remove="Shared\TimeSelector.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Pages\Movie\Booking.razor.css" />
+    <Content Include="Pages\Movie\CreateSeat.razor.css" />
+    <Content Include="Pages\Movie\MovieDetail.razor.css" />
     <Content Include="Shared\TimeSelector.razor.css" />
   </ItemGroup>
 
