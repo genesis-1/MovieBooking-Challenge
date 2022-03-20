@@ -1,15 +1,13 @@
-﻿namespace Skillsbox.Challenge.MovieBooking.Core.Entities
+﻿namespace Skillsbox.Challenge.MovieBooking.API.Model.Booking
 {
-    public class Ticket
+    public class TicketDto
     {
-        public int Id { get; set; }
         public int BookingId { get; set; }
 
         //this is delived from the total number of AgeCategoryUnits
         public int TotalNumberOfTicketsTobeBooked { get; set; }
 
         //this is delived from the total number of AgeCategoryUnits
-        public decimal TotalPricePerAgeCategories{ get; set; }
-        ICollection<AgeCategoryDetail> AgeCategoryDetails { get; set;}
+        public decimal TotalPricePerAgeCategories { get; }
     }
 }

@@ -15,6 +15,11 @@ namespace Skillsbox.Challenge.MovieBooking.Core.Persistence
 
         ICategoryRepository CategoryRepository { get; }
 
+        IBookingRepository BookingRepository { get; }
+        ISeatRepository SeatsRepository { get; }
+        ITicketRepository TicketRepository { get; }
+        IAgeCategoryDetailRepository AgeCategoryDetailRepository { get; }
+
         void Save();
     }
 }

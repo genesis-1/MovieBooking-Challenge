@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Skillsbox.Challenge.MovieBooking.Infrastructure;
 
@@ -10,9 +11,10 @@ using Skillsbox.Challenge.MovieBooking.Infrastructure;
 namespace Skillsbox.Challenge.MovieBooking.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220320071040_addedBookingDetail")]
+    partial class addedBookingDetail
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.3");
@@ -227,9 +229,6 @@ namespace Skillsbox.Challenge.MovieBooking.Infrastructure.Migrations
 
                     b.Property<int>("TotalNumberOfTicketsTobeBooked")
                         .HasColumnType("INTEGER");
-
-                    b.Property<decimal>("TotalPricePerAgeCategories")
-                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 

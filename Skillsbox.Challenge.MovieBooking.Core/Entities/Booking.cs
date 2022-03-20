@@ -9,6 +9,7 @@ namespace Skillsbox.Challenge.MovieBooking.Core.Entities
     public  class Booking
     {
         public int Id { get; set; }
+        public int MovieId { get; set; }
         public string MovieBookedBy { get; set; }
         public DateTime MovieBookedon { get; set; }
 
@@ -16,12 +17,10 @@ namespace Skillsbox.Challenge.MovieBooking.Core.Entities
 
         public string BookingOwnerEmail { get; set; }
 
-        public Decimal TotalBookingPrice { get; set; }
-
         public int TotalBookedSeats { get; set; }
 
         public ICollection<Seat> BookedSeats { get; set; }
-        public ICollection<Ticket> Tickets { get; set; }
+        public Ticket Ticket { get; set; }
 
 
 

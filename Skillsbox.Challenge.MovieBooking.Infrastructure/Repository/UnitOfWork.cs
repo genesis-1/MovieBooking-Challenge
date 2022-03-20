@@ -23,6 +23,10 @@ namespace Skillsbox.Challenge.MovieBooking.Infrastructure.Repository
             MovieRepository = new MovieRepository(_db,_cacheService);
             CategoryRepository = new CategoryRepository(_db,_cacheService);
             RunningDayRepository = new RunningDayRepository(_db,_cacheService);
+            BookingRepository = new BookingRepository(_db,_cacheService);
+            TicketRepository = new TicketRepository(_db,_cacheService);
+            SeatsRepository = new SeatRepository(_db,_cacheService);
+            AgeCategoryDetailRepository = new AgeCategoryDetailRepository(_db,_cacheService);
         }
 
         public IRunningDayRepository RunningDayRepository { get; private set; }
@@ -34,6 +38,14 @@ namespace Skillsbox.Challenge.MovieBooking.Infrastructure.Repository
         public IMovieRepository MovieRepository { get; private set; }
 
         public ICategoryRepository CategoryRepository { get; private set; }
+
+        public IBookingRepository BookingRepository { get; private set; }
+
+        public ISeatRepository SeatsRepository { get; private set; }
+
+        public ITicketRepository TicketRepository { get; private set; }
+
+        public IAgeCategoryDetailRepository AgeCategoryDetailRepository { get; private set; }
 
         public void Dispose()
         {

@@ -55,9 +55,18 @@ namespace Skillsbox.Challenge.MovieBooking.API.Controllers
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
         public async Task<ActionResult<Movie>> Get(int id)
         {
-            Get.QueryResponse response = await _mediator.Send(new Get.GetQuery() { Id = id });
+            try
+            {
+                Get.QueryResponse response = await _mediator.Send(new Get.GetQuery() { Id = id });
 
-            return response.GetMovie;
+                return response.GetMovie;
+            }
+            catch ( Exception ex)
+            {
+
+                return StatusCode(500, $"Internal server error: {ex}");
+            }
+
         }
 
     }
