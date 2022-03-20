@@ -33,10 +33,10 @@ namespace Skillsbox.Challenge.MovieBooking.API.Model.Category
 
         public class CommandHandler : IRequestHandler<CreateCategoryCommand, CommandResponse>
         {
-            private readonly ICategoryRepository _repo;
+            private readonly IUnitOfWork _repo;
             private readonly IMapper _mapper;
 
-            public CommandHandler(ICategoryRepository repo,
+            public CommandHandler(IUnitOfWork repo,
                                   IMapper mapper)
             {
                 this._repo = repo ?? throw new ArgumentNullException(nameof(repo));
@@ -48,7 +48,7 @@ namespace Skillsbox.Challenge.MovieBooking.API.Model.Category
                 CommandResponse response = new();
 
                 Core.Entities.Category category = _mapper.Map<Core.Entities.Category>(request);
-                await _repo.AddAsync(category);
+                await _repo.CategoryRepository.AddAsync(category);
                 response.Id = category.Id;
                 return response;
             }

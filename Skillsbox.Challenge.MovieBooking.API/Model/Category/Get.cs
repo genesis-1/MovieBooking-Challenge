@@ -34,9 +34,9 @@ namespace Skillsbox.Challenge.MovieBooking.API.Model.Category
 
         public class QueryHandler : IRequestHandler<GetQuery, QueryResponse>
         {
-            private readonly ICategoryRepository _repo;
+            private readonly IUnitOfWork _repo; 
             private readonly IMapper _mapper;
-            public QueryHandler(ICategoryRepository repo, IMapper mapper)
+            public QueryHandler(IUnitOfWork repo, IMapper mapper)
             {
                 this._repo = repo ?? throw new ArgumentNullException(nameof(repo));
                 this._mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
@@ -46,7 +46,7 @@ namespace Skillsbox.Challenge.MovieBooking.API.Model.Category
             {
                 QueryResponse response = new();
 
-                Core.Entities.Category category = await _repo.GetByIdAsync(request.Id);
+                Core.Entities.Category category = await _repo.CategoryRepository.GetByIdAsync(request.Id);
                 if(category == null)
                 {
                     throw new EntityNotFoundException(nameof(Category), request.Id);

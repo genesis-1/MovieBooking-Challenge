@@ -36,10 +36,10 @@ namespace Skillsbox.Challenge.MovieBooking.API.Model.Category
 
         public class CommandHandler : IRequestHandler<DeleteCategoryCommand, CommandResponse>
         {
-            private readonly ICategoryRepository _repo;
+            private readonly IUnitOfWork _repo;
             private readonly IMapper _mapper;
 
-            public CommandHandler(ICategoryRepository repo, IMapper mapper)
+            public CommandHandler(IUnitOfWork repo, IMapper mapper)
             {
                 this._repo = repo ?? throw new ArgumentNullException(nameof(repo));
                 this._mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
@@ -49,14 +49,14 @@ namespace Skillsbox.Challenge.MovieBooking.API.Model.Category
             {
                 CommandResponse response = new();
 
-                Core.Entities.Category category = await _repo.GetByIdAsync(command.Id);
+                Core.Entities.Category category = await _repo.CategoryRepository.GetByIdAsync(command.Id);
 
                 if(category == null)
                 {
                     throw new EntityNotFoundException(nameof(Category), command.Id);
                 }
 
-                await _repo.DeleteAsync(category);
+                await _repo.CategoryRepository.DeleteAsync(category);
 
                 return response;
             }
