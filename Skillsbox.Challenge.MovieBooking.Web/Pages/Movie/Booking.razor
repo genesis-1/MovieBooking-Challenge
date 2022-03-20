@@ -1,4 +1,41 @@
-﻿<h3>Booking</h3>
+﻿@page "/booking"
+
+<div class="row mt-4">
+            <div class="movie-booking-page">
+            <h1 class="movie-title">CRY MACHO <span class="movie-cinema-name">12A</span></h1>
+            <div class="movie-details">
+                <ul>
+                    <li>Cinema: MOVIES@Dundrum</li>
+                    <li>Date: Tue. 16th Nov</li>
+                    <li>Time: 4:20pm</li>
+                    <li>Screen: Screen 06</li>
+                    <li>Choose Seats: E-6, E-7, E-8 and E-9</li>
+                </ul>
+            </div>
+            <h2 class="title">Enter your payment details</h2>
+            <div class="booking-form">
+                <p>Enter your payment details</p>
+                <p>Your order total is: &pound;33.60 which includes a booking fee of &pound;1.00</p>
+                <form action="">
+                    <div class="form-item">
+                        <label for="">Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-item">
+                        <label for="">Email address</label>
+                        <input type="email">
+                    </div>
+                    <div class="form-item">
+                        <label for="">Confirm Email address</label>
+                        <input type="email">
+                    </div>
+                </form>
+            </div>
+            <div class="tickets-actions">
+                <NavLink href="#" class="ticket-proceed book-btn">Confirm</NavLink>
+            </div>
+        </div>
+</div>
 
 @code {
 

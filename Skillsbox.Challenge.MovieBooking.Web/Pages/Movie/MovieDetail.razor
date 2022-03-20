@@ -1,5 +1,77 @@
-﻿<h3>MovieDetail</h3>
+﻿@page "/movie/{id:int}"
+
+@inject IMovieService _movieService
+
+<div class="row mt-4">
+        @if (IsLoading)
+        {
+             <div class="text-center">
+                <img src="/images/loading.gif">
+                    </div>
+        }else{
+            <div class="movie-booking-page">
+            <h1 class="movie-title">@Movie.Title</h1>
+            <div class="movie-details">
+                <div class="movie-synopsis">
+                    <h3 class="text_highlight">Synopsis:</h3>
+                    <p>@Movie.Notes</p>
+                </div>
+                <ul class="movie-features">
+                    <li><span class="text_highlight">Release date:</span> @Movie.Year</li>
+                    <li><span class="text_highlight">Date:</span>@Movie.Duration minutes</li>
+                    <li><span class="text_highlight">Director:</span> @Movie.Director</li>
+                    <li><span class="text_highlight">Cast:</span> @Movie.Cast</li>
+                </ul>
+            </div>
+            <h3 class="button-bg">SHOWTIMES</h3>
+            <a class="text_highlight link-reset">Click a time to book a ticket</a>
+            <div class="schedule-container">
+
+                                   @foreach(var runningDay in @Movie.RunningTime.RunningDays)
+                                {
+                <div class="schedule-title">@runningDay.Name</div>
+                <div class="schedule-box">
+                    <div class="nav-prev"></div>
+                    @foreach (var running in @runningDay.RunningHourAndMinutes)
+                    {
+                       <div class="timeslot"><NavLink href="@($"ticket/create")" class="link-reset">@running.Time.ToShortTimeString()</NavLink></div>
+                    }
+
+                    <div class="nav-next"></div>
+                </div>
+                                }
+                
+
+
+            </div>
+           
+        </div>
+        }
+
+</div>
 
 @code {
+    [Parameter]
+    public int Id{ get; set; }
+
+    public Movie Movie { get; set; } = new Movie();
+    public bool IsLoading { get; set; }
+
+        protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if(firstRender)
+        {
+                await LoadMoveAsync();
+        }
+    }
+
+       private async Task LoadMoveAsync()
+    {
+        IsLoading=true;
+        StateHasChanged();
+        Movie = await _movieService.Get(Id);
+        IsLoading=false;
+        StateHasChanged();
+    }
 
 }

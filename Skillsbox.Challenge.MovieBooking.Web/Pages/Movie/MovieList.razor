@@ -1,8 +1,100 @@
 ﻿@page "/movie"
+@inject IMovieService _movieService
 
- <h1>Movie</h1>
- <TimeSelector></TimeSelector>
+<div class="row mt-4">
+    @if (Movies.Any())
+    {
+            <!-- Movie days start here-->
+        <div>
+            <ul class="bar">
+                <li class="active"><a href="#">Today</a></li>
+                <li><a href="#">Tomorrow</a></li>
+                <li><a href="#">Thursday</a></li>
+                <li><a href="#">Friday</a></li>
+                <li><a href="#">Saturday</a></li>
+                <li><a href="#">Sunday</a></li>
+                <li><a href="#"><img class="img" src="/images/icon-calendar.webp" alt=""></a></li>
+            </ul>
+        </div>
+        <!-- Movie days end here-->
+        <!-- Movie date start here-->
+        <div>
+            <div class="currentdate">Tuesday 16/11/2021</div>
+        </div>
+        <!-- Movie date end here-->
+        <!--Tag Start here-->
+        <div>
+            <ul class="tags">
+                <li><span class="tag tag-green"></span>Reel Parents</li>
+                <li><span class="tag tag-blue"></span>VIP/4K VIP</li>
+            </ul>
+        </div>
+        <!--Tag End here-->
+        <div>
+            @foreach(var obj in Movies)
+            {
+            <!--Movie panel Start-->
+            <div class="movie-panel">
+                <div class="poster" style="background-image:url(@obj.ImageUrl);">
+                </div>
+                <div class="panel-content">
+                    <h1 class="title"><NavLink href="@($"movie/{obj.Id}")" class="link-reset">@obj.Title</NavLink></h1>
+                    <div class="subtitle"><span class="flag">12A</span> | @obj.Duration mins</div>
+                    <ul class="time">
+                            @foreach(var runday in obj.RunningTime.RunningDays)
+                            {
+                                @foreach(var hourMinunt in runday.RunningHourAndMinutes)
+                                {
+                                   <li class=mb-4>@hourMinunt.Time.ToShortTimeString()</li>
+                                }
+                            }
+
+                    </ul>
+                </div>
+            </div>
+        <!--Movie panel end-->
+            }
+
+
+    <!--Movie panel end-->
+        </div>
+    }
+    else
+    {
+         if (IsLoading)
+            {
+                //loading gif
+                <div class="text-center">
+                <img src="/images/loading.gif">
+                </div>
+            }
+            else
+            {
+                //no records
+                <p>No recrods found.</p>
+            }
+    }
+
+</div>
 
 @code {
+    private IEnumerable<Movie> Movies { get; set; } = new List<Movie>();
+    public bool IsLoading { get; set; }
 
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await LoadMoviesAsync();
+        }
+    }
+
+    private async Task LoadMoviesAsync()
+    {
+        IsLoading=true;
+        StateHasChanged();
+        Movies = await _movieService.GetAll();
+        IsLoading=false;
+        StateHasChanged();
+    }
 }
